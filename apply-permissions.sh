@@ -10,10 +10,7 @@ SA=$(gcloud projects describe $GOOGLE_CLOUD_PROJECT --format="value(projectNumbe
 # Read each line of the file input.txt
 
 while read line; do
-
 USER_EMAIL=$line
-
-SA=$(gcloud projects describe $GOOGLE_CLOUD_PROJECT --format="value(projectNumber)")-compute@developer.gserviceaccount.com
 
 gcloud projects add-iam-policy-binding $GOOGLE_CLOUD_PROJECT --member=user:$USER_EMAIL --role=roles/ml.admin
 gcloud projects add-iam-policy-binding $GOOGLE_CLOUD_PROJECT --member=user:$USER_EMAIL --role=roles/aiplatform.admin
