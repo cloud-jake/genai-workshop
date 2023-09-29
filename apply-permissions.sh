@@ -27,6 +27,7 @@ gcloud projects add-iam-policy-binding $GOOGLE_CLOUD_PROJECT --member=user:$USER
 gcloud projects add-iam-policy-binding $GOOGLE_CLOUD_PROJECT --member=user:$USER_EMAIL --role=roles/run.admin
 gcloud projects add-iam-policy-binding $GOOGLE_CLOUD_PROJECT --member=user:$USER_EMAIL --role=roles/storage.admin
 gcloud projects add-iam-policy-binding $GOOGLE_CLOUD_PROJECT --member=user:$USER_EMAIL --role=roles/bigquery.admin
+gcloud projects add-iam-policy-binding $GOOGLE_CLOUD_PROJECT --member=user:$USER_EMAIL --role=roles/documentai.admin
 
 gcloud iam service-accounts add-iam-policy-binding $SA --member=user:$USER_EMAIL --role=roles/iam.serviceAccountUser
 
